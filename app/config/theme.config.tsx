@@ -46,7 +46,7 @@ const projectTheme = createTheme({
             defaultProps: {
                 style: {
                     borderRadius: "0.5 em",
-                    padding: "0.5em"
+                    padding: "1.2em"
                 }
             }
         },
