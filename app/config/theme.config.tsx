@@ -9,20 +9,24 @@ type ThemeProperties = {
 }
 
 export enum themePalette {
+    REGULAR_WHITE = "#FFFFFF",
+    BLUE_1 = "#1A237E",
     GRAY_1 = "#12181B",
     LIME_1 = "#C8FA5F",
+    GREEN_1 = "#4CAF50",
+
     TYPOGRAPHY = "'Lato'"
 }
 
 const projectTheme = createTheme({
 
     palette: {
-        mode: "dark",
+        mode: "light",
         background: {
-            default: themePalette.GRAY_1
+            default: themePalette.REGULAR_WHITE
         },
         primary: {
-            main: themePalette.LIME_1,
+            main: themePalette.GREEN_1,
         },
     },
 
@@ -37,7 +41,7 @@ const projectTheme = createTheme({
                     textTransform: "none",
                     boxShadow: "none",
                     borderRadius: "0.5em",
-                    background : themePalette.LIME_1
+                    background : themePalette.GREEN_1
                 }
             }
         },
@@ -46,8 +50,10 @@ const projectTheme = createTheme({
             defaultProps: {
                 style: {
                     borderRadius: "0.5 em",
-                    padding: "1.2em"
+                    padding: "1.2em",
+                    boxShadow: "0px 3px 5px rgba(0, 0, 0, 0.2)"
                 }
+                
             }
         },
 

@@ -39,83 +39,90 @@ export default function Registro() {
 
     return (
         <>
-            <Container component="main" maxWidth="xl">
+            <Box sx={{
+                backgroundImage: 'url(/images/facultad_de_enfermeria_2.jpg)',
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                minHeight: '100vh',
+            }}>
+                <Container component="main" maxWidth="xl">
 
-                <Grid
-                    container
-                    alignItems="center"
-                    justifyContent="center"
-                    direction="column"
-                    sx={{ minHeight: "100vh" }}
-                >
+                    <Grid
+                        container
+                        alignItems="center"
+                        justifyContent="center"
+                        direction="column"
+                        sx={{ minHeight: "100vh" }}
+                    >
 
-                    <Grid item>
-                        <Paper>
-                            <Box component="form" sx={{ maxWidth: "43vh" }} onSubmit={handleSubmit}>
-                                <Stack direction="column" spacing={2}>
-                                    <Typography variant="h4">Registrar Usuario</Typography>
+                        <Grid item>
+                            <Paper>
+                                <Box component="form" sx={{ maxWidth: "43vh" }} onSubmit={handleSubmit}>
+                                    <Stack direction="column" spacing={2}>
+                                        <Typography variant="h4">Registrar Usuario</Typography>
 
-                                    <Stack direction="row" spacing={1}>
+                                        <Stack direction="row" spacing={1}>
+
+                                            <TextField
+                                                name="name"
+                                                label="Nombres"
+                                                type="text"
+                                                required
+                                                fullWidth
+                                                onChange={handleChange}
+                                            />
+
+                                            <TextField
+                                                name="lastName"
+                                                label="Apellidos"
+                                                type="text"
+                                                required
+                                                fullWidth
+                                                onChange={handleChange}
+                                            />
+                                        </Stack>
 
                                         <TextField
-                                            name="name"
-                                            label="Nombres"
-                                            type="text"
+                                            name="email"
+                                            label="Correo Electrónico"
+                                            type="email"
                                             required
+                                            placeholder='nombre@unal.edu.co'
                                             fullWidth
                                             onChange={handleChange}
+
                                         />
 
                                         <TextField
-                                            name="lastName"
-                                            label="Apellidos"
-                                            type="text"
+                                            name="password"
+                                            label="Nueva Contraseña"
+                                            type="password"
                                             required
                                             fullWidth
                                             onChange={handleChange}
+
                                         />
+
+                                        <TextField
+                                            name="confirmPassword"
+                                            label="Confirmar Contraseña"
+                                            type="password"
+                                            required
+                                            fullWidth
+                                            onChange={handleChange}
+
+                                        />
+
+                                        <Button type="submit" fullWidth sx={{ color: "black" }}>Registrar</Button>
                                     </Stack>
+                                </Box>
+                            </Paper>
+                        </Grid>
 
-                                    <TextField
-                                        name="email"
-                                        label="Correo Electrónico"
-                                        type="email"
-                                        required
-                                        placeholder='nombre@unal.edu.co'
-                                        fullWidth
-                                        onChange={handleChange}
-
-                                    />
-
-                                    <TextField
-                                        name="password"
-                                        label="Nueva Contraseña"
-                                        type="password"
-                                        required
-                                        fullWidth
-                                        onChange={handleChange}
-
-                                    />
-
-                                    <TextField
-                                        name="confirmPassword"
-                                        label="Confirmar Contraseña"
-                                        type="password"
-                                        required
-                                        fullWidth
-                                        onChange={handleChange}
-
-                                    />
-
-                                    <Button type="submit" fullWidth sx={{ color: "black" }}>Registrar</Button>
-                                </Stack>
-                            </Box>
-                        </Paper>
                     </Grid>
 
-                </Grid>
-
-            </Container>
+                </Container>
+            </Box>
         </>
     )
 }
