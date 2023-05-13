@@ -27,14 +27,14 @@ export default function Login() {
     }
 
     const handleSubmit = (e: FormEvent<HTMLInputElement>) => {
-        //e.preventDefault();
+        e.preventDefault();
         console.log(loginData);
     }
 
     return (
         <>
             <Box sx={{
-                backgroundImage:'url(/images/plaza_che_1.jpg)',
+                backgroundImage:'url(/images/gloria_galeano_1.jpg)',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: "cover",
                 minHeight: '100vh',
