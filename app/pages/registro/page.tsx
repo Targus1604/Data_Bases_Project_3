@@ -2,6 +2,8 @@
 
 import { Box, Button, Container, Grid, Paper, Stack, TextField, Typography } from '@mui/material'
 import React, { ChangeEvent, FormEvent } from 'react'
+import { useNotification } from '@/app/context/notification.context'
+import { registerValidation } from '@/app/helpers/formValidtation'
 
 type NewUser = {
     name: string,
@@ -12,6 +14,8 @@ type NewUser = {
 }
 
 export default function Registro() {
+
+    const {getSuccess, getError} = useNotification();
 
     const [newUserData, setNewUserData] = React.useState<NewUser>(
         {
@@ -33,7 +37,11 @@ export default function Registro() {
 
     const handleSubmit = (e: FormEvent<HTMLInputElement>) => {
         e.preventDefault();
-        console.log(newUserData);
+        registerValidation.validate(newUserData).then(() => {
+            getSuccess(JSON.stringify(newUserData))
+        }).catch((error) => {
+            getError(error.message)
+        })
     }
 
 
@@ -67,7 +75,6 @@ export default function Registro() {
                                                 name="name"
                                                 label="Nombres"
                                                 type="text"
-                                                required
                                                 fullWidth
                                                 onChange={handleChange}
                                             />
@@ -76,7 +83,6 @@ export default function Registro() {
                                                 name="lastName"
                                                 label="Apellidos"
                                                 type="text"
-                                                required
                                                 fullWidth
                                                 onChange={handleChange}
                                             />
@@ -86,7 +92,6 @@ export default function Registro() {
                                             name="email"
                                             label="Correo Electrónico"
                                             type="email"
-                                            required
                                             placeholder='nombre@unal.edu.co'
                                             fullWidth
                                             onChange={handleChange}
@@ -97,7 +102,6 @@ export default function Registro() {
                                             name="password"
                                             label="Nueva Contraseña"
                                             type="password"
-                                            required
                                             fullWidth
                                             onChange={handleChange}
 
@@ -107,7 +111,6 @@ export default function Registro() {
                                             name="confirmPassword"
                                             label="Confirmar Contraseña"
                                             type="password"
-                                            required
                                             fullWidth
                                             onChange={handleChange}
 

@@ -1,7 +1,9 @@
 "use client"
 
+import { useNotification } from '@/app/context/notification.context'
 import { Box, Button, Container, Grid, Paper, Stack, TextField, Typography } from '@mui/material'
 import React, { ChangeEvent, FormEvent } from 'react'
+import { loginValidation } from '@/app/helpers/formValidtation'
 
 type LoginData = {
     email: string,
@@ -9,6 +11,8 @@ type LoginData = {
 }
 
 export default function Login() {
+
+    const {getError, getSuccess} = useNotification(); //Custom context called "useNotification()".
 
     const [loginData, setLoginData] = React.useState<LoginData>(
         {
@@ -28,7 +32,16 @@ export default function Login() {
 
     const handleSubmit = (e: FormEvent<HTMLInputElement>) => {
         e.preventDefault();
-        console.log(loginData);
+        
+        loginValidation.validate(loginData).then (() => {
+
+            getSuccess(JSON.stringify(loginData));
+
+        }).catch((error) => {
+
+            getError(error.message)
+
+        })
     }
 
     return (
@@ -57,10 +70,9 @@ export default function Login() {
 
                                         <TextField
                                             label="Correo Electrónico"
-                                            type="text"
+                                            type="email"
                                             placeholder='nombre@unal.edu.co'
                                             name="email"
-                                            required
                                             fullWidth
                                             onChange={handleChange}
                                         />
@@ -70,7 +82,6 @@ export default function Login() {
                                             type="password"
                                             placeholder='Ingrese su contraseña aqui'
                                             name="password"
-                                            required
                                             fullWidth
                                             onChange={handleChange}
                                         />
@@ -80,9 +91,7 @@ export default function Login() {
                                 </Box>
                             </Paper>
                         </Grid>
-
                     </Grid>
-
                 </Container>
             </Box>
         </>
