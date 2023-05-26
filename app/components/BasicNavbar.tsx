@@ -5,12 +5,8 @@ import Toolbar from "@mui/material/Toolbar"
 import Typography from "@mui/material/Typography"
 import React from "react";
 import { Grid, IconButton, Stack } from "@mui/material";
-import Link from "next/link";
-import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import WbSunnyOutlinedIcon from '@mui/icons-material/WbSunnyOutlined';
 import Image from "next/image"
 import MenuIcon from '@mui/icons-material/Menu';
-import PersonIcon from '@mui/icons-material/Person';
 
 import { TemporaryDrawer } from "./TemporaryDrawer";
 

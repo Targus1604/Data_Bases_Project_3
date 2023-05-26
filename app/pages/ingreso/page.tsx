@@ -12,7 +12,7 @@ type LoginData = {
 
 export default function Login() {
 
-    const {getError, getSuccess} = useNotification(); //Custom context called "useNotification()".
+    const { getError, getSuccess } = useNotification(); //Custom context called "useNotification()".
 
     const [loginData, setLoginData] = React.useState<LoginData>(
         {
@@ -32,8 +32,8 @@ export default function Login() {
 
     const handleSubmit = (e: FormEvent<HTMLInputElement>) => {
         e.preventDefault();
-        
-        loginValidation.validate(loginData).then (() => {
+
+        loginValidation.validate(loginData).then(() => {
 
             getSuccess(JSON.stringify(loginData));
 
@@ -47,7 +47,7 @@ export default function Login() {
     return (
         <>
             <Box sx={{
-                backgroundImage:'url(/images/gloria_galeano_1.jpg)',
+                backgroundImage: 'url(/images/gloria_galeano_1.jpg)',
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: "cover",
                 minHeight: '100vh',
@@ -86,7 +86,7 @@ export default function Login() {
                                             onChange={handleChange}
                                         />
 
-                                        <Button type="submit" fullWidth sx={{ color: "black" }}>Acceder</Button>
+                                        <Button type="submit" fullWidth sx={{ color: "black", backgroundColor: "#4CAF50" }}>Acceder</Button>
                                     </Stack>
                                 </Box>
                             </Paper>

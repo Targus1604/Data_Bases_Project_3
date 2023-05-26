@@ -13,7 +13,7 @@ type basicLayoutProperties = {
     pageName : string
 }
 
-export function BasicLayout({ children, navbarColor, pageName }: basicLayoutProperties) {
+export default function BasicLayout({ children, navbarColor, pageName }: basicLayoutProperties) {
     return (
         <>
             <BasicNavbar backgroundColor={navbarColor} pageName = {pageName}></BasicNavbar>
@@ -22,4 +22,3 @@ export function BasicLayout({ children, navbarColor, pageName }: basicLayoutProp
     )
 }
 
-export default BasicLayout

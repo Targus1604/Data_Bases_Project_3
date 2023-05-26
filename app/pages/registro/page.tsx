@@ -15,7 +15,7 @@ type NewUser = {
 
 export default function Registro() {
 
-    const {getSuccess, getError} = useNotification();
+    const { getSuccess, getError } = useNotification();
 
     const [newUserData, setNewUserData] = React.useState<NewUser>(
         {
@@ -116,7 +116,7 @@ export default function Registro() {
 
                                         />
 
-                                        <Button type="submit" fullWidth sx={{ color: "black" }}>Registrar</Button>
+                                        <Button type="submit" fullWidth sx={{ color: "black", backgroundColor: "#4CAF50" }}>Registrar</Button>
                                     </Stack>
                                 </Box>
                             </Paper>
