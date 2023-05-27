@@ -1,9 +1,12 @@
 "use client"
 import BasicLayout from '@/app/layouts/BasicLayout'
-import { Box, Button, Container, Grid, IconButton, Paper, Typography } from '@mui/material'
+import { Button, Grid, Stack, Typography } from '@mui/material'
 import SearchIcon from '@mui/icons-material/Search';
 import React from 'react'
 
+
+import HealingIcon from '@mui/icons-material/Healing';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 export default function Salud() {
     return (
@@ -25,17 +28,41 @@ export default function Salud() {
                     <Grid item>
 
 
-                        <Button variant="contained" sx={{ color: "black", bgcolor: "Teal" }} endIcon={<SearchIcon />}>
+                        <Stack direction="row"
+                            justifyContent="center"
+                            alignItems="center"
+                            spacing={8}
+                        >
+                            <Button variant="contained" sx={{ color: "black", bgcolor: "Teal" }} endIcon={<SearchIcon />}>
 
-                            <Typography variant="body1">
-                                Buscar citas médicas
-                            </Typography>
+                                <Typography variant="body1">
+                                    Citas médicas
+                                </Typography>
 
-                        </Button>
+                            </Button>
+
+                            <Button variant="contained" sx={{ color: "black", bgcolor: "Teal" }} endIcon={<HealingIcon />}>
+
+                                <Typography variant="body1">
+                                    Incapacidades
+                                </Typography>
+
+                            </Button>
+
+                            <Button variant="contained" sx={{ color: "black", bgcolor: "Teal" }} endIcon={<AccountCircleIcon />}>
+
+                                <Typography variant="body1">
+                                    Mi perfil de riesgo
+                                </Typography>
+
+                            </Button>
+                        </Stack>
+
+
 
 
                     </Grid>
-                    <Grid item sx={{ width: "90%", mt: 1.8 }}>
+                    <Grid item sx={{ width: "90%", mt: 1.8, mb: 2 }}>
                         <Grid
                             container
                             component="div"
@@ -87,365 +114,313 @@ export default function Salud() {
 
                             >
                                 <Typography variant='body1'>
-                                    CC
+                                    CÉDULA DE CIUDADANÍA
                                 </Typography>
                             </Grid>
 
 
 
-                            <Grid item xs={2}>
-        //cargo
-                            </Grid>
-
-
-
-
-                            <Grid item xs={2}>
-        //codigo cita
-                            </Grid>
-
-                            <Grid item xs={2}>
-        //fecha
-                            </Grid>
-
-                            <Grid item xs={2}>
-        //especialidad
-                            </Grid>
-
-                            <Grid item xs={2}>
-        //diagnostico
-                            </Grid>
-
-                            <Grid item xs={2}>
-        //cargo
-                            </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                código cita
                             </Grid>
 
 
                             <Grid item xs={2}>
-        //codigo cita
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                código cita
                             </Grid>
 
 
                             <Grid item xs={2}>
-        //codigo cita
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                código cita
                             </Grid>
-
 
-                            <Grid item xs={2}>
-        //codigo cita
-                            </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                cc.estudiante
                             </Grid>
-
 
                             <Grid item xs={2}>
-        //codigo cita
+                                código cita
                             </Grid>
 
-                            <Grid item xs={2}>
-        //fecha
-                            </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                00-00-00
                             </Grid>
 
-
                             <Grid item xs={2}>
-        //codigo cita
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                código cita
                             </Grid>
 
-                            <Grid item xs={2}>
-        //especialidad
-                            </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                especialidad
                             </Grid>
 
-
                             <Grid item xs={2}>
-        //codigo cita
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                código cita
                             </Grid>
 
-                            <Grid item xs={2}>
-        //diagnostico
-                            </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                diagnóstico
                             </Grid>
 
-
                             <Grid item xs={2}>
-        //codigo cita
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                código cita
                             </Grid>
 
-                            <Grid item xs={2}>
-        //cargo
-                            </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                cc.doctor
                             </Grid>
-
 
                             <Grid item xs={2}>
-        //codigo cita
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                cc.estudiante
                             </Grid>
 
-                            <Grid item xs={2}>
-        //cargo
-                            </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                código cita
                             </Grid>
 
 
                             <Grid item xs={2}>
-        //codigo cita
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                código cita
                             </Grid>
 
 
                             <Grid item xs={2}>
-        //codigo cita
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                código cita
                             </Grid>
 
 
                             <Grid item xs={2}>
-        //codigo cita
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                código cita
                             </Grid>
 
 
                             <Grid item xs={2}>
-        //codigo cita
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                cc.estudiante
                             </Grid>
 
                             <Grid item xs={2}>
-        //cc
+                                código cita
                             </Grid>
 
 
                             <Grid item xs={2}>
-        //codigo cita
+                                cc.doctor
                             </Grid>
 
                             <Grid item xs={2}>
-        //fecha
+                                diagnóstico
                             </Grid>
 
                             <Grid item xs={2}>
-        //especialidad
+                                especialidad
                             </Grid>
 
                             <Grid item xs={2}>
-        //diagnostico
+                                00-00-00
                             </Grid>
 
                             <Grid item xs={2}>
-        //cargo
+                                cc.estudiante
                             </Grid>
-
-                            
 
 
 
